@@ -17,12 +17,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function ProdutosColecao() {
   const produtos = [
-    { id: 1, nome: 'Imãs Decorativos', imagem: king },
-    { id: 2, nome: 'Placas automotivas', imagem: Aves },
-    { id: 3, nome: 'Placas Religiosas', imagem: Decorativas },
-    { id: 4, nome: 'Placas esportivas', imagem: Esportivas },
-    { id: 5, nome: 'Coleção de Aves', imagem: Religiosa },
-    { id: 6, nome: 'Placas de Gaiolas', imagem: Gaiola },
+    { id: 1, nome: 'Imãs Decorativos', imagem: king  },
+    { id: 2, nome: 'Coleção de Aves', imagem: Aves },
+    { id: 3, nome: 'Placas de Gaiolas', imagem: Gaiola },
+    { id: 4, nome: 'Placas automotivas', imagem: Decorativas },
+    { id: 5, nome: 'Placas Religiosas', imagem: Religiosa },
+    { id: 6, nome: 'Placas esportivas', imagem: Esportivas },
   ];
 
   const settings = {

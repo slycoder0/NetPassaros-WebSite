@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap');
+
+@function stripes() {
+  $shadows: ();
+  @for $i from 0 through 1000 {
+    $color: if($i % 2 == 0, #000, #fff);
+    $shadow: 0 #{$i * 3}px 0 $color;
+    $shadows: append($shadows, $shadow, comma);
+  }
+  @return $shadows;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background-image: url("https://storage.googleapis.com/app-tess-ai-platform-assets-prod/assets/uploads/c7816bf3-7d21-42f8-99cd-aa9da7c2bd35.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.text {
+  background-color: rgba(175, 134, 28, 0.13);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  line-height: 1; // Corrigido: adicionado line-height
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  padding: 0.625rem;
+  border-radius: 5px;
+
+
+  span {
+    display: block;
+    font-size: 4rem;
+    font-weight: 900;
+    transform: translateX(10px, -10px); // adicionado transform
+  }
+}
+
+.text--top {
+  color: #fff;
+  z-index: 3;
+  mix-blend-mode: screen; // adicionado mix-blend-mode
+  
+}
+
+.text--knockout {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+  position: absolute; // Corrigido: position absolute
+  top: 0;             // Corrigido: top 0
+  left: 0;            // Corrigido: left 0
+}
+
+
+
+.banner-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.335);
+  color: #fff;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+  margin-top: 20px; // adicionado margin-top
+}
+
+.banner-button:hover {
+  background-color: rgba(0, 0, 0, 0.425);
+  box-shadow: 4px 4px 20px 4px rgba(48, 48, 48, 0.712);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .text span {
+    font-size: 3rem; // Responsividade
+  }
+  .banner {
+    height: 300px; // Responsividade
+  }
+}
+
+@media (max-width: 480px) {
+  .text span {
+    font-size: 2rem; // Responsividade
+  }
+  .banner {
+    height: 200px; // Responsividade
+  }
+}
+
