@@ -1,0 +1,81 @@
+/* Produtos Colecao Styles */
+.produtos-colecao {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--branco);
+  color: var(--texto);
+}
+
+/* Produto Item */
+.produto-item {
+  text-align: center;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Produto Imagem */
+.produto-imagem {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Produto Info */
+.produto-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Produto Nome */
+.produto-nome {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Produto Link */
+.produto-link {
+  color: var(--branco);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.produto-link:hover {
+  color: var(--corTerciaria);
+}
+
+.produto-seta {
+  color: var(--texto);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .produtos-colecao {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-colecao {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .produto-nome {
+    font-size: 1rem;
+  }
+
+  .produto-link {
+    font-size: 1.2rem;
+  }
+}

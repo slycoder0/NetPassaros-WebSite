@@ -1,0 +1,110 @@
+/* Card de Texto Completo */
+.full-text {
+  width: 80%;
+  background-color: var(--corPrincipal);
+  color: var(--branco);
+  text-align: left;
+  padding: 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+/* Container de Sobre Nos */
+.sobre-nos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--corPrincipal);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card de Sobre Nos */
+.sobre-nos-card {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid black;
+}
+
+.sobre-nos-card:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 4px 20px 4px black;
+}
+
+/* Título de Sobre Nos */
+.sobre-nos-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* Texto de Sobre Nos */
+.sobre-nos-text {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: darkgray;
+}
+
+/* Inverter Ordem */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Imagem de Sobre Nos */
+.sobre-nos-image {
+  width: 50%;
+  height: auto;
+}
+
+/* Conteúdo de Sobre Nos */
+.sobre-nos-content {
+  padding: 1.5rem;
+  width: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-nos-card {
+    flex-direction: column;
+  }
+
+  .sobre-nos-image,
+  .sobre-nos-content {
+    width: 100%;
+  }
+
+  .full-text {
+    padding: 2rem;
+  }
+
+  .sobre-nos-title {
+    font-size: 1.5rem;
+  }
+
+  .sobre-nos-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-text {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .sobre-nos-title {
+    font-size: 1.25rem;
+  }
+
+  .sobre-nos-text {
+    font-size: 0.9rem;
+  }
+}
