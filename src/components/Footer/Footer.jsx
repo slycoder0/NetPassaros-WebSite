@@ -1,7 +1,6 @@
 import './Footer.css';
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-import Logo from '/logo2.png'; // Caminho direto a partir da pasta public
-
+import Logo from '../../../public/logo2.png'; 
 
 export default function Footer() {
   return (
