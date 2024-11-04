@@ -1,6 +1,6 @@
 // Importação do CSS, logo e ícones
 import "./Header.css";
-import Logo from "../../../public/Logo2.png";
+import Logo from '/Logo2.png'; // Caminho direto a partir da pasta public
 import { FaBagShopping, FaMagnifyingGlass } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 
