@@ -1,6 +1,6 @@
 import './Footer.css';
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-import Logo from '../../../public/Logo2.png'; // Substitua pelo caminho correto da sua logo
+import Logo from '../../../public/logo2.png'; 
 
 export default function Footer() {
   return (
