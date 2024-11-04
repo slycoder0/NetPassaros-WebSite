@@ -3,10 +3,12 @@
   background-color: var(--corPrincipal);
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0.625rem;
   box-shadow: 4px 4px 4px 4px black;
+  position: relative;
+  z-index: 10;
 }
 
 /* Logo Styles */
@@ -48,19 +50,30 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
   .navigation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: var(--corPrincipal);
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
-  .icons {
-    margin-top: 0.5rem;
+  .navigation.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
   }
 }
 
